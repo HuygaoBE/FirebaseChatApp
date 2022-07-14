@@ -11,7 +11,7 @@
 Ứng dụng có các tính năng cơ bản của 1 Chat app.
 
   * Đăng nhập bằng account Google.
-  <img src="./images/post.PNG" width="350" height="550" />
+  <img src="./images/post.PNG" width="350" height="750" />
   
   * Post ảnh
   <img src="./images/home.PNG" width="350" height="550" />
@@ -34,9 +34,9 @@ Một số tính năng còn thiếu, sắp được bổ sung: Profile, Like but
 Cấu trúc NoSQL(Firebase) của Firebase Chat app để lưu trữ tin nhắn
 <img src="./images/firebase.PNG" width="750" height="350" />
 
-[Hướng dẫn thiết đặt ban đầu cho Firebase](https://firebase.google.com/docs?gclid=CjwKCAjw_b6WBhAQEiwAp4HyIG0UBqg2OYllVTB5-64IxhymvvmBBFxCAkOb5ktZQE7TjXNjNG3KmRoCW3UQAvD_BwE&gclsrc=aw.ds)
-[Package Source Firebase](https://firebase.flutter.dev/)
-[Install Flutter SDK](https://docs.flutter.dev/get-started/install)
+  * [Hướng dẫn thiết đặt ban đầu cho Firebase](https://firebase.google.com/docs?gclid=CjwKCAjw_b6WBhAQEiwAp4HyIG0UBqg2OYllVTB5-64IxhymvvmBBFxCAkOb5ktZQE7TjXNjNG3KmRoCW3UQAvD_BwE&gclsrc=aw.ds)
+  * [Package Source Firebase](https://firebase.flutter.dev/)
+  * [Install Flutter SDK](https://docs.flutter.dev/get-started/install)
 
 ## 📘Main libraries used
 
