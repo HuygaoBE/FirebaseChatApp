@@ -10,22 +10,22 @@
 ## 🔑Features
 Ứng dụng có các tính năng cơ bản của 1 Chat app.
 
-  * Đăng nhập bằng account Google.
+  * **Đăng nhập bằng account Google**
   <img src="./images/post.PNG" width="350" height="750" />
   
-  * Post ảnh
+  * **Post ảnh**
   <img src="./images/home.PNG" width="350" height="550" />
   
-  * Tìm kiếm bạn bè
+  * **Tìm kiếm bạn bè**
   <img src="./images/search.PNG" width="350" height="550" />
   
-  * Chat
+  * **Chat**
   <img src="./images/message.gif" width="350" height="550" />
   
   * Cập nhật Avatar, background, birthday
   <img src="./images/profile.PNG" width="350" height="550" />
   
-  * Đăng xuất
+  * **Đăng xuất**
   
 Một số tính năng còn thiếu, sắp được bổ sung: Profile, Like button, Comment, Status.
 
