@@ -42,7 +42,7 @@ Cấu trúc NoSQL(Firebase) của Firebase Chat app để lưu trữ tin nhắn
 
 ## 📘Main libraries used
 
-Cái package mà đã sử dụng trong dự án Firebase Chat App của tôi [tại dây](/firebase_chat_app/pubspec.yaml)
+Cái package mà đã sử dụng trong dự án Firebase Chat App của tôi [tại đây.](/firebase_chat_app/pubspec.yaml)
 
 ## 🌏Other Social Media
 
