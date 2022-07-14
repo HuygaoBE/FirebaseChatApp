@@ -20,6 +20,7 @@
   <img src="./images/search.PNG" width="350" height="550" />
   
   * **Chat**
+  
   <img src="./images/chat_screen.PNG" width="300" height="550" /> <img src="./images/message.gif" width="350" height="550" />
   <img src="./images/chat.PNG" width="300" height="550" />
   
