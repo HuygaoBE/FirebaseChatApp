@@ -20,6 +20,7 @@ class UserModel {
       required this.birthdaydate,
       required this.uid,});
 
+  // factory UserModel.fromJson(DocumentSnapshot snapshot) {
   factory UserModel.fromDocument(DocumentSnapshot snapshot) {
     return UserModel(
       email: snapshot['email'],

@@ -32,6 +32,7 @@ class _UpdateBackgroundState extends State<UpdateBackground> {
     super.dispose();
   }
 
+  //------------------------------------------------------------------------
 
   File? imageFile;
   Future getImage() async {
@@ -55,6 +56,7 @@ class _UpdateBackgroundState extends State<UpdateBackground> {
     String imageUrl = await uploadTask.ref.getDownloadURL();
     print('imageUrl-----------------------: ${imageUrl}');
 
+    //---------------------------------------------------------------------
 
     await FirebaseFirestore.instance
         .collection('users')
@@ -64,10 +66,32 @@ class _UpdateBackgroundState extends State<UpdateBackground> {
           "backgroundimage": '${imageUrl}',
         });
 
+    //---------------------------------------------------------------------
   }
 
   @override
   Widget build(BuildContext context) {
+    // return Container(
+    //   height: 10.0,
+    //   width: 10.0,
+    //   margin: const EdgeInsets.all(10.0),
+    //   child: IconButton(
+    //     icon: Icon(Icons.add_a_photo_sharp),
+    //     onPressed: () {
+
+    //     },
+    //   ),
+    // );
+    // return MaterialButton(
+    //   onPressed: () {},
+    //   color: Colors.blue,
+    //   child: const Icon(
+    //     Icons.add_a_photo_sharp,
+    //     size: 16.0,
+    //   ),
+    //   padding: const EdgeInsets.all(9.0),
+    //   shape: const CircleBorder(),
+    // );
 
     return Container(
       width: 37,

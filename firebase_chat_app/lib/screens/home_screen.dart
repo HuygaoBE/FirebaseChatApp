@@ -11,12 +11,14 @@ import 'package:google_sign_in/google_sign_in.dart';
 class HomeScreen extends StatefulWidget {
   UserModel user;
   HomeScreen(this.user);
+  // static const String id = 'homescreen';
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //-------------------------------------------------------
 
   @override
   //@override Thực thi hàm initState của lớp cha State lớp cha của lớp _MyHomePageState
@@ -32,13 +34,75 @@ class _HomeScreenState extends State<HomeScreen> {
 
 //-----------------------------------------------------------------------------
 
+  // void setUserStatus({@required String }){}
+  // Stream<DocumentSnapshot> getUserStatus(){
+
+  // }
+  // void getUserStatus() async {
+  //   var status;
+  //   status = await FirebaseFirestore.instance
+  //       .collection('users')
+  //       .doc(widget.user.uid)
+  //       .collection('status')
+  //       .snapshots();
+  //   print('STATUS-----xx--------------${status}');
+  // }
+
+  //-------------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // drawer: Drawer(
+      //   child: ListView(
+      //     padding: EdgeInsets.zero,
+      //     children: <Widget>[
+      //       DrawerHeader(
+      //         decoration: BoxDecoration(
+      //           color: Colors.blue.shade700,
+      //         ),
+      //         child: Column(
+      //           children: [
+      //             CircleAvatar(
+      //               radius: 52.0,
+      //               // backgroundImage: ,
+      //             )
+      //           ],
+      //         ),
+      //       ),
+      //       ListTile(
+      //         leading: const Icon(Icons.home),
+      //         title: const Text('Home'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //         },
+      //       ),
+      //       ListTile(
+      //         leading: const Icon(Icons.info),
+      //         title: const Text('Info Image'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //         },
+      //       ),
+      //     ],
+      //   ),
+      // ),
       appBar: AppBar(
         title: const Text('Chat'),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        // actions: [
+        //   IconButton(
+        //     onPressed: () async {
+        //       await GoogleSignIn().signOut();
+        //       await FirebaseAuth.instance.signOut();
+        //       Navigator.pushAndRemoveUntil(
+        //           context,
+        //           MaterialPageRoute(builder: (context) => AuthScreen()),
+        //           (route) => false);
+        //     },
+        //     icon: const Icon(Icons.logout),
+        //   ),
+        // ],
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
@@ -69,6 +133,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         return ListTile(
                           leading: Stack(
                             children: <Widget>[
+                              // ClipRRect(
+                              //   borderRadius: BorderRadius.circular(80),
+                              //   child: CachedNetworkImage(
+                              //     imageUrl: friend['image'],
+                              //     placeholder: (context, url) =>
+                              //         const CircularProgressIndicator(),
+                              //     errorWidget: (context, url, error) =>
+                              //         const Icon(
+                              //       Icons.error,
+                              //     ),
+                              //     height: 50,
+                              //   ),
+                              // ),
+                              //Avatar Image
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: CircleAvatar(
@@ -109,6 +187,15 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         },
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.search),
+      //   onPressed: () {
+      //     Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //             builder: (context) => SearchScreen(widget.user)));
+      //   },
+      // ),
     );
   }
 }

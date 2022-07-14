@@ -37,6 +37,19 @@ class _MessageTextFieldState extends State<MessageTextField> {
     super.dispose();
   }
 
+//-----------------------------------------------------------------------------
+//In xem data trang thai status
+  // void getUserStatus() async {
+  //   var status;
+  //   status = await FirebaseFirestore.instance
+  //       .collection('users')
+  //       .doc(widget.currentId)
+  //       .collection('status')
+  //       .snapshots();
+  //   print('STATUS-----xx--------------${status}');
+  // }
+//------------------------------------------------------------------------
+
   File? imageFile;
   Future getImage() async {
     ImagePicker picker = ImagePicker();
@@ -121,6 +134,9 @@ class _MessageTextFieldState extends State<MessageTextField> {
                 suffixIcon: IconButton(
                   onPressed: () async {
                     getImage();
+                    // setState(() {
+                    //   getImage();
+                    // });
                   },
                   icon: const Icon(
                     Icons.photo,

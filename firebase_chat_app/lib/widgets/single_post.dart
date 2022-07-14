@@ -93,6 +93,13 @@ class _SinglePostState extends State<SinglePost> {
           "postid": postID.id,
     });
   }
+
+//------------------------------------------------------------------------------------------
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //   );
+  // }
   TextEditingController writingTextController = TextEditingController();
   final FocusNode _nodeText1 = FocusNode();
   FocusNode writingTextFocus = FocusNode();
@@ -159,6 +166,17 @@ class _SinglePostState extends State<SinglePost> {
       // postImageURL = await FBStorage.uploadPostImages(postID: postID, postImageFile: _postImageFile);
       uploadImage();
     }
+    // FBCloudStore.sendPostInFirebase(postID,writingTextController.text,widget.myData,postImageURL ?? 'NONE');
+    // await FirebaseFirestore.instance
+    //     .collection('users')
+    //     //thay đổi vị trí, Upload message ở phía người nhắn
+    //     .doc(widget.user.uid)
+    //     .collection('post')
+    //     .add({
+    //   "uid": widget.user.uid,
+    //   "date": DateTime.now(),
+    //   "image": '${imageUrl}',
+    // });
 
     setState(() {
       _isLoading = false;
@@ -208,6 +226,25 @@ class _SinglePostState extends State<SinglePost> {
                               //Avatar Image
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
+                                // child: Container(
+                                //     width: 40,
+                                //     height: 40,
+                                //     child:
+                                //         Image.network('${widget.user.image}')),
+                                // child: ClipRRect(
+                                //   borderRadius: BorderRadius.circular(80),
+                                //   child: CachedNetworkImage(
+                                //     imageUrl: widget.user.image,
+                                //     placeholder: (context, url) =>
+                                //         const CircularProgressIndicator(),
+                                //     errorWidget: (context, url, error) =>
+                                //         const Icon(
+                                //       Icons.error,
+                                //     ),
+                                //     height: 40,
+                                //     width: 40,
+                                //   ),
+                                // ),
                                 child: CircleAvatar(
                                   radius: 22.0,
                                   backgroundImage:

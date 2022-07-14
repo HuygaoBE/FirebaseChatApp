@@ -13,6 +13,7 @@ import 'package:firebase_chat_app/screens/test_screen.dart';
 import 'package:firebase_chat_app/screens/test_screen.dart';
 
 class HomePage extends StatefulWidget {
+  // const HomePage({Key? key}) : super(key: key);
   UserModel user;
   HomePage(this.user);
 
@@ -21,6 +22,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   Future<Widget> nextPage(UserModel userModel) async {
     return HomeScreen(userModel);
@@ -41,10 +43,115 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   //----------------------------
+  //   return Scaffold(
+  //       bottomNavigationBar: CurvedNavigationBar(
+  //         key: _bottomNavigationKey,
+  //         index: 0,
+  //         height: 60.0,
+  //         items: const <Widget>[
+  //           Icon(Icons.cottage, size: 30),
+  //           Icon(Icons.person_search, size: 30),
+  //           Icon(Icons.chat, size: 30),
+  //           Icon(Icons.perm_identity, size: 30),
+  //         ],
+  //         color: Colors.white,
+  //         buttonBackgroundColor: Colors.white,
+  //         backgroundColor: Colors.blueAccent,
+  //         animationCurve: Curves.easeInOut,
+  //         animationDuration: const Duration(milliseconds: 600),
+  //         onTap: (index) {
+  //           setState(() {
+  //             _page = index;
+  //             // screens[index];
+  //           });
+  //         },
+  //         letIndexChange: (index) => true,
+  //       ),
+  //       body: screens[_page]
+  //       // body: Container(
+  //       //   color: Colors.blueAccent,
+  //       //   child: Center(
+  //       //     child: Column(
+  //       //       mainAxisAlignment: MainAxisAlignment.center,
+  //       //       children: <Widget>[
+  //       //         Text(_page.toString(), textScaleFactor: 10.0),
+  //       //         ElevatedButton(
+  //       //           child: const Text('Go To Page of index 1'),
+  //       //           onPressed: () {
+  //       //             final CurvedNavigationBarState? navBarState =
+  //       //                 _bottomNavigationKey.currentState;
+  //       //             navBarState?.setPage(3);
+  //       //           },
+  //       //         )
+  //       //       ],
+  //       //     ),
+  //       //   ),
+  //       // ),
+  //       );
+  // }
   GlobalKey _NavKey = GlobalKey();
 
+  //-------------------------------------------
+  // @override
+  // void initState() {
+  //   super.initState();
+  // }
+
+  // @override
+  // void PushHomeScreen() {
+  //   Navigator.push(context,
+  //       MaterialPageRoute(builder: (context) => HomeScreen(widget.user)));
+  // }
+
+  // var PagesAll = [
+  //   nextScreen(),
+  //   TestScreen(userModel),
+  //   // TestScreen('home!'),
+  //   // TestScreen('home!'),
+  //   // TestScreen('home!')
+  // ];
 
   var myindex = 0;
+  //-----------------------------------------------------------------------------
+  // int _currIndex = 0;
+  // _onTap(int index) {
+  //   setState(() => _currIndex = index);
+  //   switch (index) {
+  //     case 0:
+  //       Navigator.of(context)
+  //           .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+  //         return new DataPage(data: 'Home');
+  //       }));
+  //       break;
+  //     case 1:
+  //       Navigator.of(context)
+  //           .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+  //         return new DataPage(data: 'Favorite');
+  //       }));
+  //       break;
+  //     case 2:
+  //       Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => HomeScreen(widget.user)));
+  //       break;
+  //     case 3:
+  //       Navigator.of(context)
+  //           .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+  //         return new DataPage(data: 'Settings');
+  //       }));
+  //       break;
+  //     default:
+  //       Navigator.of(context)
+  //           .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+  //         return new DataPage(data: 'Home');
+  //       }));
+  //   }
+  // }
+
+  //----------------------------------------------------------------------------
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

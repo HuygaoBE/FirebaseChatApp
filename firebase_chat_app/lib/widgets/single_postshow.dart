@@ -73,6 +73,17 @@ class _SinglePostShowState extends State<SinglePostShow> {
 
     String imageUrl = await uploadTask.ref.getDownloadURL();
     print('imageUrl-----------------------: ${imageUrl}');
+
+    //---------------------------------------------------------------------
+
+    // await FirebaseFirestore.instance
+    //     .collection('users')
+    //     //thay đổi vị trí, Upload message ở phía người nhắn
+    //     .doc(widget.user.uid)
+    //     .update({
+    //       "image": '${imageUrl}',
+    //     });
+
     //update key document post
     await FirebaseFirestore.instance
         .collection('post')
@@ -83,6 +94,13 @@ class _SinglePostShowState extends State<SinglePostShow> {
       "image": imageUrl,
     });
   }
+
+//------------------------------------------------------------------------------------------
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //   );
+  // }
   final _fromKey = GlobalKey<FormState>();
   TextEditingController writingTextController = TextEditingController();
   final FocusNode _nodeText1 = FocusNode();
@@ -281,7 +299,16 @@ class _SinglePostShowState extends State<SinglePostShow> {
                                 hintMaxLines: 4,
                               ),
                               controller:
+                                  // (writingTextController.text).length == null ?
+                                  // (widget.content) :
                                   writingTextController,
+                              // onChanged: (value) {
+                              //   if (value.isEmpty) {
+                              //       setState(() {
+                              //         writingTextController.text = widget.content;
+                              //       });
+                              //   }
+                              // },
                               keyboardType: TextInputType.multiline,
                               maxLines: null,
                             ),
@@ -302,6 +329,8 @@ class _SinglePostShowState extends State<SinglePostShow> {
               ],
             ),
           ),
+          // const Center(child: CircularProgressIndicator()),
+          // Utils.loadingCircle(_isLoading),
         ],
       ),
     );

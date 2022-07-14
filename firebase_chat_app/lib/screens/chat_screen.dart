@@ -24,10 +24,58 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
+        // title: Row(
+        //   children: [
+        //     ClipRRect(
+        //       borderRadius: BorderRadius.circular(80),
+        //       child: CachedNetworkImage(
+        //         imageUrl: friendImage,
+        //         placeholder: (conteext, url) =>
+        //             const CircularProgressIndicator(),
+        //         errorWidget: (context, url, error) => const Icon(
+        //           Icons.error,
+        //         ),
+        //         height: 40,
+        //       ),
+        //     ),
+        //     Align(
+        //       alignment: Alignment.bottomRight,
+        //       child: Container(
+        //         height: 13.0,
+        //         width: 13.0,
+        //         decoration: BoxDecoration(
+        //           shape: BoxShape.circle,
+        //           color: Colors.green,
+        //           border: Border.all(color: Colors.red, width: 2.0),
+        //         ),
+        //       ),
+        //     ),
+        //     const SizedBox(
+        //       width: 5,
+        //     ),
+        //     Text(
+        //       friendName,
+        //       style: const TextStyle(fontSize: 18.0),
+        //     )
+        //   ],
+        // ),
         title: Row(
           children: [
             Stack(
               children: <Widget>[
+                // ClipRRect(
+                //   borderRadius: BorderRadius.circular(80),
+                //   child: CachedNetworkImage(
+                //     imageUrl: friendImage,
+                //     placeholder: (context, url) =>
+                //         const CircularProgressIndicator(),
+                //     errorWidget: (context, url, error) => const Icon(
+                //       Icons.error,
+                //     ),
+                //     height: 40,
+                //   ),
+                // ),
+                //Avatar Image
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
@@ -104,8 +152,31 @@ class ChatScreen extends StatelessWidget {
           ),
           //TextFiel Chat client
           MessageTextField(currentUser.uid, friendId),
+          //In ra data trạng thái của status user
+          // _UserStatus(),
         ],
       ),
     );
   }
+
+  // _UserStatus() {
+  //   return Container(
+  //     padding: const EdgeInsets.all(10),
+  //     child: StreamBuilder<DocumentSnapshot>(
+  //       stream: FirebaseFirestore.instance
+  //           .collection('users')
+  //           .doc(friendId)
+  //           .snapshots(),
+  //       builder: (context, AsyncSnapshot<DocumentSnapshot> snapshot) {
+  //         if (!snapshot.hasData) {
+  //           return Text('Loading UserStatus');
+  //         }
+  //         var userStatus = snapshot.data;
+  //         print(
+  //             'KQ------------------: FriendId:${friendId} ------type Status: ${(snapshot.data!['status']).runtimeType}');
+  //         return Text(snapshot.data!['status']);
+  //       },
+  //     ),
+  //   );
+  // }
 }

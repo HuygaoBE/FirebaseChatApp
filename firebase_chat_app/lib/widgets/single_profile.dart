@@ -105,6 +105,18 @@ class SingleProfile extends StatelessWidget {
               ),
               //Show Birthday Date
               BirthdayDate(user: useruid, birthdaydate: birthdaydate),
+              //Button Chỉnh sửa Profile
+              // OutlinedButton(
+              //   style: ButtonStyle(
+              //     shape: MaterialStateProperty.all(
+              //       RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(30.0),
+              //       ),
+              //     ),
+              //   ),
+              //   child: const Text('Chỉnh sửa'),
+              //   onPressed: () {},
+              // ),
               //Logout Account
               const SizedBox(
                 height: 150.0,

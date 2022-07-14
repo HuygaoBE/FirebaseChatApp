@@ -15,6 +15,7 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
   Future<Widget> userSignedIn() async {
     User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
           .collection('users')
           .doc(user.uid)
           .get();
+      // UserModel userModel = UserModel.fromJson(userData);
       UserModel userModel = UserModel.fromDocument(userData);
+      // return HomeScreen(userModel);
       return HomePage(userModel);
     } else {
       return AuthScreen();
@@ -33,6 +36,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // initialRoute: HomeScreen.id,
+      // routes: {
+      //   HomeScreen.id: (context) => HomeScreen(),
+
+      // },
       title: 'Flutter Demo123',
       theme: ThemeData(
         primarySwatch: Colors.blue,

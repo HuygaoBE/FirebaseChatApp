@@ -20,6 +20,12 @@ class _PostScreenState extends State<PostScreen> {
         .doc(avt)
         .get()
         .then((DocumentSnapshot documentSnapshot) {
+      // if (documentSnapshot.exists) {
+        // print('Document data: ${documentSnapshot.get('image')}');
+      // } else {
+      //   print('Document does not exist on the database');
+      // }
+      // return documentSnapshot.get('image');
     });
   }
 
@@ -28,6 +34,7 @@ class _PostScreenState extends State<PostScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
             child: Container(
@@ -59,6 +66,15 @@ class _PostScreenState extends State<PostScreen> {
                       reverse: true,
                       physics: BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
+                        // return SingleMessage(
+                        //   message: snapshot.data.docs[index]['message'],
+                        //   messageImage: snapshot.data.docs[index]
+                        //       ['messageImage'],
+                        //   isMe: isMe,
+                        //   datetime: snapshot.data.docs[index]['date']
+                        //       .toDate()
+                        //       .toString(),
+                        // );
                         _avatarRoot(snapshot.data.docs[index]['uid']);
 
                         return PostShow(
@@ -81,7 +97,14 @@ class _PostScreenState extends State<PostScreen> {
           ),
           //Button Post-------------------------------
           Container(
+            // height: 290,
+            // width: 450,
             padding: const EdgeInsets.only(
+              // left: 290,
+              // top: 0,
+              // right: 20,
+              // bottom: 200,
+              // right: 1,
               bottom: 80,
             ),
             child: FloatingActionButton.extended(
@@ -101,6 +124,22 @@ class _PostScreenState extends State<PostScreen> {
           ),
         ],
       ),
+      // bottomNavigationBar: FloatingActionButton.extended(
+      //   onPressed: () {},
+      //   icon: const Icon(Icons.save),
+      //   label: const Text("halo"),
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.miniEndDocked,
+      // floatingActionButton: Positioned(
+      //   // width: 200.0,
+      //   // height: 200.0,
+      //   right: 20.0,
+      //   top: 1,
+      //   child: FloatingActionButton(
+      //     onPressed: () {},
+      //     child: const Icon(Icons.create),
+      //   ),
+      // ),
     );
   }
 }

@@ -45,6 +45,20 @@ class _AuthScreenState extends State<AuthScreen>
     return result;
   }
 
+  // void setStatus(String status) async {
+  //   await firestore.collection('users').doc(userCredential.user!.uid)
+  // }
+
+  // @override
+  // void didChangeAppLifecycleState(AppLifecycleState state) {
+  //   if (state == AppLifecycleState.resumed) {
+  //     //Online status
+  //     setStatus('Online');
+  //   } else {
+  //     //Offline status
+  //     setStatus('Offline');
+  //   }
+  // }
 
   @override
   void dispose() {
@@ -98,6 +112,10 @@ class _AuthScreenState extends State<AuthScreen>
           children: [
             Hero(
               tag: 'logo',
+              // child: Container(
+              //   child: Image.asset('images/logo.png'),
+              //   height: 80.0,
+              // ),
               child: Container(
                 child: Icon(
                   Icons.people,
@@ -116,6 +134,9 @@ class _AuthScreenState extends State<AuthScreen>
                 ),
                 child: AnimatedTextKit(
                   repeatForever: true,
+                  // animatedTexts: [
+                  //   TypewriterAnimatedText('Chat Engine', cursor: '🤞'),
+                  // ],
                   animatedTexts: [
                     RotateAnimatedText('CHAT ENGINE'),
                     RotateAnimatedText('HÃY THỬ'),
@@ -127,6 +148,14 @@ class _AuthScreenState extends State<AuthScreen>
                 ),
               ),
             ),
+            // Expanded(
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //         image: DecorationImage(
+            //             image: NetworkImage(
+            //                 "https://cdn.iconscout.com/icon/free/png-256/chat-2639493-2187526.png"))),
+            //   ),
+            // ),
             const Text(
               "Chat App",
               style: TextStyle(

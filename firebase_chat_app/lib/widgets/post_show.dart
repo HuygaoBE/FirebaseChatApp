@@ -28,6 +28,55 @@ class PostShow extends StatefulWidget {
 }
 
 class _PostShowState extends State<PostShow> {
+
+  // void initState() {
+  //   super.initState();
+  //   _avatarRoot();
+  // }
+
+  //---------------------------------------------
+
+  //-----------------------------------------------
+
+  // void _avatarRoot() async {
+  //   await FirebaseFirestore.instance
+  //       .collection('users')
+  //       .doc(widget.uid)
+  //       .get()
+  //       .then((DocumentSnapshot documentSnapshot) {
+  //     // if (documentSnapshot.exists) {
+  //     //   print('Document data: ${documentSnapshot.get('image')}');
+  //     // } else {
+  //     //   print('Document does not exist on the database');
+  //     // }
+  //     LinkImage(documentSnapshot.get('image'));
+  //   });
+  // }
+
+  // String LinkImage(String avt) {
+  //   print('AVT-------------------------: ${avt}');
+  //   return avt;
+  // }
+
+
+//--------------------------------------------------------
+
+  // String LinkAvatar(String scr) {
+  //   var temp = FirebaseFirestore.instance
+  //       .collection('users')
+  //       .doc(widget.uid)
+  //       .get()
+  //       .then((DocumentSnapshot documentSnapshot) {
+  //     // if (documentSnapshot.exists) {
+  //     //   print('Document data: ${documentSnapshot.get('image')}');
+  //     // } else {
+  //     //   print('Document does not exist on the database');
+  //     // }
+  //     documentSnapshot.get('image');
+  //   });
+  //   return temp;
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -75,6 +124,9 @@ class _PostShowState extends State<PostShow> {
                     ),
                   ],
                 ),
+                // const SizedBox(
+                //   width: 100.0,
+                // ),
                 //Post Delete and Update---------------------------
                 widget.user.uid == widget.uid
                     ? Align(

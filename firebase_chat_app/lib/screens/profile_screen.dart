@@ -14,6 +14,14 @@ class ProflieScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProflieScreen> {
   @override
   Widget build(BuildContext context) {
+    // return Scaffold(
+    //   body: Stack(
+    //     alignment: Alignment.center,
+    //     children: [
+    //       _readFirebaseUser(),
+    //     ],
+    //   ),
+    // );
     return _readFirebaseUser();
   }
 
@@ -26,6 +34,25 @@ class _ProfileScreenState extends State<ProflieScreen> {
             .snapshots(),
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
+            // return ListView.builder(
+            //   itemCount: snapshot.data.docs.length,
+            //   reverse: true,
+            //   physics: BouncingScrollPhysics(),
+            //   itemBuilder: (context, index) {
+            //     bool isMe =
+            //         snapshot.data.docs[index]['senderId'] == currentUser.uid;
+            //     return SingleMessage(
+            //       message: snapshot.data.docs[index]['message'],
+            //       messageImage: snapshot.data.docs[index]['messageImage'],
+            //       isMe: isMe,
+            //       datetime:
+            //           snapshot.data.docs[index]['date'].toDate().toString(),
+            //     );
+            //   },
+            // );
+            //Get link Image User
+            // _backgroundImage(snapshot.data['image']);
+            // return _AvatarImage(snapshot.data['image']);
             return SingleProfile(
               backgroundImage: snapshot.data['backgroundimage'],
               avatarImage: snapshot.data['image'],
@@ -60,3 +87,22 @@ class _ProfileScreenState extends State<ProflieScreen> {
     );
   }
 }
+
+// _backgroundImage(String img) {
+//   return Container(
+//     color: Colors.grey,
+//     child: Image.network(
+//       '${img}',
+//       width: double.infinity,
+//       height: 280.0,
+//       fit: BoxFit.cover,
+//     ),
+//   );
+// }
+
+// _AvatarImage(String img) {
+//   return CircleAvatar(
+//     backgroundColor: Colors.grey.shade800,
+//     backgroundImage: NetworkImage('${img}'),
+//   );
+// }
